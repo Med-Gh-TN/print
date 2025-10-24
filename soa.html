@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte Rendu : TP1-SOA2025</title>
+    <style>
+        /*
+         * ENHANCED CSS FOR TECHNICAL REPORT
+         * Designer: AI UI/UX Specialist
+         * Goal: Improve readability, professionalism, and visual hierarchy.
+        */
+
+        /* -- 1. FONT IMPORT & GLOBAL SETUP -- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap');
+
+        :root {
+            /* A refined, professional color palette */
+            --primary-color: #005A9C;   /* A deeper, more corporate blue */
+            --secondary-color: #4A90E2; /* A softer blue for accents */
+            --dark-color: #333333;      /* Dark gray for text, easier on the eyes than pure black */
+            --light-color: #f7f9fc;    /* A very light gray for the page background */
+            --border-color: #e0e0e0;   /* A neutral border color */
+            --code-bg-color: #f0f2f5;   /* Light background for code snippets */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Using 'Inter' for body text enhances readability for long paragraphs */
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px; /* Add padding for smaller screens */
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+        }
+
+        /* -- 2. MAIN LAYOUT & CONTAINER -- */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07); /* A softer, more modern shadow */
+            border-radius: 8px; /* Subtle rounding */
+            border-top: 5px solid var(--primary-color); /* Professional accent */
+        }
+
+        /* -- 3. HEADER & TYPOGRAPHY HIERARCHY -- */
+        header {
+            /* Removed the gradient for a cleaner, more formal look */
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 25px;
+        }
+
+        header h1 {
+            /* 'Poppins' is used for headings to create a clear distinction */
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+        
+        header p {
+            margin: 4px 0 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        section {
+            margin-bottom: 40px; /* Consistent spacing between sections */
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-top: 50px; /* Clear separation for new sections */
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 1.2em; /* Spacing between paragraphs */
+        }
+
+        /* -- 4. ENHANCED ELEMENTS (IMAGES, CODE, LISTS) -- */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            border: 1px solid var(--border-color);
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #6c757d;
+            margin-top: -15px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+
+        /* This is a key element: making code distinct and readable */
+        code {
+            background-color: var(--code-bg-color);
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+        
+        /* This is critical for highlighting the query results */
+        ul {
+            padding-left: 20px;
+            list-style: none; /* Remove default bullets to replace them */
+        }
+        
+        li {
+            padding-left: 20px;
+            margin-bottom: 15px; /* More space between list items */
+            position: relative; /* Needed for the custom bullet */
+        }
+
+        /* Custom bullets draw attention and add a touch of professional branding */
+        li::before {
+            content: '✓'; /* Using a checkmark or other symbol can be effective */
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Compte Rendu : TP1-SOA2025</h1>
+            <p><strong>Auteur :</strong> Mouhamed Gharsallah</p>
+            <p><strong>Classe :</strong> LSI3 - SOA</p>
+        </header>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Ce projet a pour objectif de concevoir et d'implémenter un système de gestion pour une agence de location de voitures. Pour cela, nous avons utilisé les technologies XML qui permettent de structurer, valider et manipuler des données de manière efficace et standardisée.
+            </p>
+        </section>
+
+        <section id="modelisation">
+            <h2>Partie 1: La Modélisation de la Base de Données</h2>
+            <p>
+                Avant de commencer à coder, la première étape a été de réfléchir à la structure de nos données. Nous avons créé un schéma pour visualiser les différentes "tables" d'informations et les liens qui existent entre elles.
+            </p>
+            
+            <img src="1.png" alt="Schéma Entité-Association de la base de données du projet">
+            <p class="caption">Figure 1 : Schéma Entité-Association de la base de données.</p>
+            
+            <p>
+                Comme le montre le schéma, les entités principales sont <code>Agence</code>, <code>Voiture</code>, <code>Client</code>, et <code>ContratDeLocation</code>. Le diagramme nous aide à comprendre les relations logiques. Par exemple, une <code>Agence</code> peut avoir plusieurs <code>Voitures</code>, et un <code>Client</code> peut signer plusieurs <code>ContratsDeLocation</code>. La connexion entre ces tables se fait grâce aux clés étrangères, ce qui garantit que les données restent cohérentes.
+            </p>
+        </section>
+
+        <section id="analyse-fichiers">
+            <h2>Partie 2: Analyse des Fichiers Clés du Projet</h2>
+            <p>
+                Le projet est construit autour de trois fichiers principaux qui travaillent ensemble.
+            </p>
+
+            <h3>Le "Plan" des Données : <code>schema_location_voiture.xsd</code></h3>
+            <p>Ce fichier est le "règlement" ou le "plan" que toutes nos données doivent respecter. On y trouve des balises importantes comme <code>&lt;xs:element&gt;</code> pour définir nos balises, et <code>&lt;xs:key&gt;</code>/<code>&lt;xs:keyref&gt;</code> pour assurer les liens entre les données, comme des clés primaires et étrangères.</p>
+
+            <h3>La "Base de Données" : <code>systemeLocationVoiture.xml</code></h3>
+            <p>Ce fichier contient toutes les données réelles de notre agence (clients, voitures, etc.). Chaque ligne respecte les règles du <code>.xsd</code>, ce qui rend nos données organisées et fiables.</p>
+
+            <h3>Le "Programme" : <code>Main.java</code></h3>
+            <p>Le code Java est le moteur du projet. Il effectue deux tâches : d'abord, la <strong>Validation</strong> pour vérifier que le XML est correct, puis <strong>l'Interrogation</strong> avec XPath pour poser des questions aux données et en extraire des informations utiles.</p>
+        </section>
+
+        <section id="resultats">
+            <h2>Partie 3: Résultats de l'Exécution</h2>
+            <p>
+                L'exécution du programme se déroule en deux étapes principales. D'abord, la phase de <strong>validation</strong>. Le programme a utilisé notre schéma <code>schema_location_voiture.xsd</code> comme une "liste de contrôle" pour vérifier que le fichier <code>systemeLocationVoiture.xml</code> est parfaitement structuré. Comme le montre la première ligne de la sortie ("Validation réussie"), cette étape s'est terminée sans aucune erreur. C'est une étape essentielle, car elle nous donne la certitude que nos données sont propres et fiables avant même de commencer à les interroger.
+                <br>
+                Une fois cette vérification passée, le programme a pu exécuter en toute confiance les 7 requêtes XPath. Voici la sortie obtenue dans la console :
+            </p>
+            
+            <img src="2.png" alt="Sortie de la console après exécution du programme Java">
+            <p class="caption">Figure 2 : Sortie du programme affichant les résultats des requêtes XPath.</p>
+
+            <h3>Analyse des Résultats</h3>
+            <p>Chaque résultat correspond à une question spécifique posée par une requête XPath :</p>
+            <ul>
+                <li><strong>Requête 1 :</strong> On a demandé les noms des employés de l'agence de Sfax (<code>AG01</code>). Le programme a bien trouvé "Mouhamed Gharsallah" et "Fatma Maaloul" dans le fichier XML.</li>
+                <li><strong>Requête 2 :</strong> Une recherche simple pour trouver l'email d'un employé spécifique, qui a été retourné correctement.</li>
+                <li><strong>Requête 4 :</strong> Le programme a utilisé la fonction <code>sum()</code> de XPath pour calculer le total des paiements pour le contrat <code>CON01</code> et a trouvé 180.00 TND.</li>
+                <li><strong>Requête 5 :</strong> Ici, on voit la puissance de XPath. La requête a trouvé le contrat <code>CON02</code>, a récupéré l'ID du client (<code>refClient</code>), puis a utilisé cet ID pour rechercher les informations complètes du client dans une autre partie du document.</li>
+                <li><strong>Requête 6 :</strong> La fonction <code>count()</code> a été utilisée pour compter toutes les balises <code>&lt;voiture&gt;</code> ayant l'attribut <code>statut="Disponible"</code>. Le résultat est 4.</li>
+                <li><strong>Requête 7 :</strong> Le résultat "Aucun résultat trouvé" est aussi une réussite ! Cela montre que notre requête était très précise : elle cherchait une voiture qui était à la fois de catégorie "Économique" ET située à l'agence de "Tunis". Comme aucune voiture ne correspondait à ces deux critères, le programme n'a rien retourné, ce qui est le comportement correct.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
