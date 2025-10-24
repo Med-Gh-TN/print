@@ -41,7 +41,6 @@
 
         /* -- 2. MAIN LAYOUT & CONTAINER -- */
         .container {
-            max-width: 850px;
             margin: 40px auto;
             padding: 50px;
             background-color: #ffffff;
@@ -163,13 +162,13 @@
         <header>
             <h1>Compte Rendu : TP1-SOA2025</h1>
             <p><strong>Auteur :</strong> Mouhamed Gharsallah</p>
-            <p><strong>Classe :</strong> LSI3 - SOA</p>
+            <p><strong>Classe :</strong> LSI3 TP 2 - 1 </p>
         </header>
 
         <section id="introduction">
             <h2>Introduction</h2>
             <p>
-                Ce projet a pour objectif de concevoir et d'implémenter un système de gestion pour une agence de location de voitures. Pour cela, nous avons utilisé les technologies XML qui permettent de structurer, valider et manipuler des données de manière efficace et standardisée.
+                    Comme le montre le schéma, les entités principales sont <code>Agence</code> (nom, adresse, ville), <code>Voiture</code> (plaque_immatriculation, marque, modele), <code>Client</code> (prenom, nom_de_famille, numero_permis), et <code>ContratDeLocation</code> (date_debut_real, date_fin_real, montant_total). Le diagramme nous aide à comprendre les relations logiques. Par exemple, une <code>Agence</code> peut avoir plusieurs <code>Voitures</code>, et un <code>Client</code> peut signer plusieurs <code>ContratsDeLocation</code>. La connexion entre ces tables se fait grâce aux clés étrangères, ce qui garantit que les données restent cohérentes.
             </p>
         </section>
 
@@ -229,4 +228,5 @@
     </div>
 
 </body>
+
 </html>
